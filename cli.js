@@ -2,7 +2,7 @@
 'use strict';
 const meow = require('meow');
 const qrcodedPublicIpTerminal = require('.');
-const drawQrcode = require('./lib/qrcode/draw-qrcode');
+const drawQrcode = require('lib/qrcode/draw-qrcode.js');
 
 const cli = meow(`
 	Usage
