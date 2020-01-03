@@ -6,12 +6,28 @@
 ## Install
 
 ```
-$ npm install qrcoded-public-ip-terminal
+$ npm install --global qrcoded-public-ip-terminal
 ```
 
 
 ## Usage
 
+### Basic Usage:
+```sh
+ $  qrcode-myip [PORT]
+
+ # Examples:
+
+ qrcode-myip
+    # Defaults to port 9000
+
+ qrcode-myip 3000
+    # -> localhost:3000
+ qrcode-myip 8080
+    # -> localhost:8080
+```
+
+### Extended Documentation
 ```sh
 Usage
   $ qrcoded-public-ip-terminal [PORT]

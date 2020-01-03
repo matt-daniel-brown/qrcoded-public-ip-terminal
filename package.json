@@ -9,7 +9,7 @@
 		"email": "hi@mattbrown.email",
 		"url": "dev.mattdanielbrown.com"
 	},
-	"bin": "cli.js",
+	"bin" : { "qrcode-myip" : "./cli.js" },
 	"engines": {
 		"node": ">=8"
 	},
