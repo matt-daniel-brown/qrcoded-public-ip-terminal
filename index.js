@@ -1,6 +1,6 @@
 'use strict';
 
-const getPublicAddressAndPort = require('./lib/ip/get-public-address-and-port');
+const getPublicAddressAndPort = require('lib/ip/get-public-address-and-port');
 const coloration = require('./lib/utils/coloration');
 
 
