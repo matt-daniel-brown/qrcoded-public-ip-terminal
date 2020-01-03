@@ -1,7 +1,7 @@
 'use strict';
 
 const publicAddress = require('./lib/public-address');
-const coloration = require('./lib/utils/coloration');
+const coloration = require('./lib/coloration');
 
 
 
