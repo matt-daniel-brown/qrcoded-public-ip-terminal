@@ -1,6 +1,6 @@
 {
 	"name": "qrcoded-public-ip-terminal",
-	"version": "1.3.3",
+	"version": "1.3.4",
 	"description": "Generate and display your public/dev/testing IP address as QR code in your terminal.",
 	"license": "MIT",
 	"repository": "matt-daniel-brown/qrcoded-public-ip-terminal",
@@ -19,11 +19,13 @@
 	"files": [
 		"index.js",
 		"cli.js",
-	  	"lib/ip/get-public-address-and-port.js",
-	  	"lib/qrcode/draw-qrcode.js",
-	  	"lib/utils/coloration.js"
+	  	"lib/public-address.js",
+	  	"lib/qrcode-creator.js"
 	],
-  	"lib": "./lib",
+  	"lib": "lib",
+  	"directories": {
+	  "lib": "lib"
+	},
 	"keywords": [
 		"cli-app",
 		"cli",

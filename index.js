@@ -1,7 +1,8 @@
 'use strict';
 
-const getPublicAddressAndPort = require('lib/ip/get-public-address-and-port');
+const publicAddress = require('./lib/public-address');
 const coloration = require('./lib/utils/coloration');
+
 
 
 
@@ -13,7 +14,8 @@ module.exports = (input, {postfix = 9000} = {}) => {
 
 
 
-	const addressAndPort = getPublicAddressAndPort(input);
+	// const addressAndPort = getPublicAddressAndPort(input);
+	const addressAndPort = publicAddress(input);
 	const localHostAddress = `http://localhost:${input}`;
 
 /*	const qrLogoContent = `

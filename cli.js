@@ -2,7 +2,8 @@
 'use strict';
 const meow = require('meow');
 const qrcodedPublicIpTerminal = require('.');
-const drawQrcode = require('lib/qrcode/draw-qrcode.js');
+// const drawQrcode = require('lib/qrcode/draw-qrcode.js');
+const drawQrcode = require('./lib/qrcode-creator');
 
 const cli = meow(`
 	Usage
@@ -27,7 +28,8 @@ let argTwo = cli.input[1];
 let argOneAsNumber = Number(argOne);
 let mainObjects = qrcodedPublicIpTerminal(argOneAsNumber || 9000);
 // console.log(qrcodedPublicIpTerminal(cli.input[0] || '9000'));
-
 console.log(mainObjects.themedText);
 // console.log();
+console.log("\n");
 drawQrcode.createQr(mainObjects.qrcodeImageData);
+console.log("\n");
