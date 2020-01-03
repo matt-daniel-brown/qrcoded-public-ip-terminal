@@ -6,14 +6,15 @@ const coloration = require('./lib/utils/coloration');
 
 
 
-module.exports = (input, {postfix = 'rainbows'} = {}) => {
-	if (typeof input !== 'string') {
+module.exports = (input, {postfix = 9000} = {}) => {
+	if (typeof input !== 'number') {
 		throw new TypeError(`Expected a string, got ${typeof input}`);
 	}
 
 
 
-	const addressAndPort = getPublicAddressAndPort();
+	const addressAndPort = getPublicAddressAndPort(input);
+	const localHostAddress = `http://localhost:${input}`;
 
 /*	const qrLogoContent = `
 ╔════╗       ╔════╗
@@ -31,7 +32,7 @@ module.exports = (input, {postfix = 'rainbows'} = {}) => {
 
 	const mainTitle = `${coloration.colorize('  ⌘ Public IP Address and Port To QR Code   ', "mainTitle")}`;
 	const themedText = `${coloration.colorize(qrLogoContent, "success")}
-          ${coloration.colorize('LOCAL ADDRESS:', "dimLabel")}  \t ${coloration.colorize('http://localhost:9000', "dimPrimary")}
+          ${coloration.colorize('LOCAL ADDRESS:', "dimLabel")}  \t ${coloration.colorize(localHostAddress, "dimPrimary")}
           ${coloration.colorize('PUBLIC ADDRESS:', "label")} \t ${coloration.colorize(addressAndPort, "primary")}`;
 	return {
 		themedText: themedText,

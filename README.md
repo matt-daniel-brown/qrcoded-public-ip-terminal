@@ -12,11 +12,21 @@ $ npm install qrcoded-public-ip-terminal
 
 ## Usage
 
-```js
-const qrcodedPublicIpTerminal = require('qrcoded-public-ip-terminal');
+```sh
+Usage
+  $ qrcoded-public-ip-terminal [PORT]
 
-qrcodedPublicIpTerminal('unicorns');
-//=> 'unicorns & rainbows'
+Options
+  --port  Port [Default: 9000]
+
+Examples
+  $ qrcoded-public-ip-terminal
+    # ...  PUBLIC ADDRESS: 	 192.168.86.28:9000
+    # ...  { QR Code Encoded Public IP Address }
+
+  $ qrcoded-public-ip-terminal 3000
+    # ...  PUBLIC ADDRESS: 	 192.168.86.28:3000
+    # ...  { QR Code Encoded Public IP Address }
 ```
 
 
@@ -26,9 +36,9 @@ qrcodedPublicIpTerminal('unicorns');
 
 #### input
 
-Type: `string`
+Type: `integer`
 
-Lorem ipsum.
+Port
 
 #### options
 

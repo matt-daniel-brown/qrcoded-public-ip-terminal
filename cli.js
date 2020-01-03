@@ -22,10 +22,12 @@ const cli = meow(`
 `);
 const clearConsole = require('clear-any-console');
 clearConsole();
-let mainObjects = qrcodedPublicIpTerminal(cli.input[0] || '9000');
-// console.log(qrcodedPublicIpTerminal(cli.input[0] || '9000'));
 let argOne = cli.input[0];
 let argTwo = cli.input[1];
+let argOneAsNumber = Number(argOne);
+let mainObjects = qrcodedPublicIpTerminal(argOneAsNumber || 9000);
+// console.log(qrcodedPublicIpTerminal(cli.input[0] || '9000'));
+
 console.log(mainObjects.themedText);
 // console.log();
 drawQrcode.createQr(mainObjects.qrcodeImageData);
